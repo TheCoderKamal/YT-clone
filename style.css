@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.icon-menu-1{
+    margin-left: -200px;
+}
+.icon-menu-1:hover {
+    margin-left: -200px;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.w{
+    width: calc(100vw - 70px);
+}
+
+.h{
+    height: calc(100% - 20vh - 40px);
+}
+
+
+.txt {
+    width: 500px;
+    height: 50px;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background-color: transparent;
+    outline: none;
+    transition: 0.5s;
+    border-radius: 50px;
+}

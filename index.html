@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/Dakirby309-Simply-Styled-YouTube.256.ico"
+      type="image/x-icon"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="cursor-default">
+    <div class="h-[100vh] w-[100%] flex">
+      <!-- Short Menu -->
+      <div class="hidden md:block">
+        <div
+          class="h-[100%] w-[70px] bg-[#0F0F0F] text-white flex flex-col items-center pt-[10px] relative gap-5"
+        >
+          <div
+            class="icon-menu w-[35px] h-[35px] rounded-full bg-red flex flex-col justify-center items-center hover:bg-[#272727] py-6 px-6 text-sm"
+          >
+            <i class="fa-solid fa-bars xmd:text-xl"></i>
+          </div>
+
+          <a href="#home">
+            <div
+              class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center hover:bg-[#272727] py-6 px-6 rounded-md text-sm"
+            >
+              <i class="fa-solid fa-home pt-2 xmd:pt-4 xmd:text-xl"></i>
+              <h3 class="text-[8px] xmd:text-[9px] xmd:pt-1 xmd:pb-[10px]">
+                Home
+              </h3>
+            </div>
+          </a>
+
+          <a href="#shorts">
+            <div
+              class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center hover:bg-[#272727] py-6 px-6 rounded-md text-sm"
+            >
+              <i class="fa-solid fa-radio pt-2 xmd:pt-4 xmd:text-xl"></i>
+              <h3 class="text-[8px] xmd:text-[9px] xmd:pt-1 xmd:pb-[10px]">
+                Shorts
+              </h3>
+            </div>
+          </a>
+
+          <a href="#sub">
+            <div
+              class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center hover:bg-[#272727] py-6 px-6 rounded-md text-sm"
+            >
+              <i class="fa-solid fa-film pt-2 xmd:pt-4 xmd:text-xl"></i>
+              <h3 class="text-[8px] xmd:text-[9px] xmd:pt-1 xmd:pb-[10px]">
+                Subscription
+              </h3>
+            </div>
+          </a>
+
+          <a href="#save">
+            <div
+              class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center hover:bg-[#272727] py-6 px-6 rounded-md text-sm"
+            >
+              <i class="fa-solid fa-bookmark pt-2 xmd:pt-4 xmd:text-xl"></i>
+              <h3 class="text-[8px] xmd:text-[9px] xmd:pt-1 xmd:pb-[10px]">
+                Save
+              </h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Long Menu -->
+      <div
+        class="h-[100vh] w-[250px] bg-black icon-menu-1 absolute px-[2vh] overflow-scroll"
+      >
+        <div class="flex items-center justify-start">
+          <div
+            class="bar w-[35px] h-[35px] rounded-full bg-red flex flex-col justify-center items-center hover:bg-[#272727] py-6 px-6 text-sm"
+          >
+            <i class="fa-solid fa-bars xmd:text-xl text-white"></i>
+          </div>
+          <div class="w-[110px]">
+            <img
+              class="w-full"
+              src="assets/images/YouTube-White-Full-Color-Logo.wine.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 lg:gap-[6px] lg:text-[17px]">
+          <a href="#home">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-home me-5"></i>
+              <h3 class="">Home</h3>
+            </div>
+          </a>
+
+          <a href="#shorts">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-radio me-5"></i>
+              <h3 class="">Shorts</h3>
+            </div>
+          </a>
+
+          <a href="#sub">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-film me-5"></i>
+              <h3 class="">Subscription</h3>
+            </div>
+          </a>
+
+          <div class="w-full bg-[#3F3F3F] h-[1px] my-2"></div>
+
+          <a href="#you">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <h3 class="">You</h3>
+              <i class="fa-solid fa-angle-right ms-5"></i>
+            </div>
+          </a>
+
+          <a href="#urChannel">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-id-card me-5"></i>
+              <h3 class="">Your channel</h3>
+            </div>
+          </a>
+
+          <a href="#playLists">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-list-check me-5"></i>
+              <h3 class="">Playlists</h3>
+            </div>
+          </a>
+
+          <a href="#urVideos">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-square-caret-right me-5"></i>
+              <h3 class="">Your videos</h3>
+            </div>
+          </a>
+
+          <a href="#watchLater">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-regular fa-clock me-5"></i>
+              <h3 class="">Watch later</h3>
+            </div>
+          </a>
+
+          <a href="#likedVideos">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-regular fa-thumbs-up me-5"></i>
+              <h3 class="">Liked videos</h3>
+            </div>
+          </a>
+
+          <div class="w-full bg-[#3F3F3F] h-[1px] my-2"></div>
+
+          <h1 class="text-white font-bold ps-4">Subscription</h1>
+
+          <a href="#kiranda">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/kiranda.jpg"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">Kiran Vinkar</h3>
+            </div>
+          </a>
+
+          <a href="#divineMusic">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/divineMusic.jpg"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">Divine Music</h3>
+            </div>
+          </a>
+
+          <a href="#CBTNuggets">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/CBTNuggets.jpg"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">CBT Nuggets</h3>
+            </div>
+          </a>
+
+          <a href="#cosmodiumCyber">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/cosmodiumCyber.jpg"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">Cosmodium</h3>
+            </div>
+          </a>
+
+          <a href="#tomorrowUnloked">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/tomorrowUnloked.jpg"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">Tomorrow</h3>
+            </div>
+          </a>
+
+          <a href="#mrWhoseTheBoss">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/mrWhoseTheBoss.jpg"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">MrWhoseTheBoss</h3>
+            </div>
+          </a>
+
+          <a href="#rajendra">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/rajendra.jpg"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">Pt. Rajendra</h3>
+            </div>
+          </a>
+
+          <div class="w-full bg-[#3F3F3F] h-[1px] my-2"></div>
+
+          <h1 class="text-white font-bold ps-4">Explore</h1>
+
+          <a href="#trending">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-fire me-5"></i>
+              <h3 class="text-sm xmd:text-[17px]">Trending</h3>
+            </div>
+          </a>
+
+          <a href="#shopping">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-bag-shopping me-5"></i>
+              <h3 class="text-sm xmd:text-[17px]">Shopping</h3>
+            </div>
+          </a>
+
+          <a href="#music">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-music me-5"></i>
+              <h3 class="text-sm xmd:text-[17px]">Music</h3>
+            </div>
+          </a>
+
+          <a href="#films">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-film me-5"></i>
+              <h3 class="text-sm xmd:text-[17px]">Films</h3>
+            </div>
+          </a>
+
+          <a href="#live">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-headset me-5"></i>
+              <h3 class="text-sm xmd:text-[17px]">Live</h3>
+            </div>
+          </a>
+
+          <!-- <a href="#gaming">
+                  <div class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]">
+                     <i class="fa-solid fa-gamepad me-5"></i>
+                     <h3 class="text-sm xmd:text-[17px]">Gaming</h3>
+                  </div>
+               </a>
+
+               <a href="#news">
+                  <div class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]">
+                     <i class="fa-solid fa-newspaper me-5"></i>
+                     <h3 class="text-sm xmd:text-[17px]">News</h3>
+                  </div>
+               </a>
+
+               <a href="#sport">
+                  <div class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]">
+                     <i class="fa-solid fa-trophy me-5"></i>
+                     <h3 class="text-sm xmd:text-[17px]">Sport</h3>
+                  </div>
+               </a>
+
+               <a href="#course">
+                  <div class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]">
+                     <i class="fa-solid fa-lightbulb me-5"></i>
+                     <h3 class="text-sm xmd:text-[17px]">Course</h3>
+                  </div>
+               </a>
+
+               <a href="#fashion&beauty">
+                  <div class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]">
+                     <i class="fa-solid fa-shirt me-5"></i>
+                     <h3 class="text-sm xmd:text-[17px]">Fashion</h3>
+                  </div>
+               </a>
+
+               <a href="#podcast">
+                  <div class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]">
+                     <i class="fa-solid fa-podcast me-5"></i>
+                     <h3 class="text-sm xmd:text-[17px]">Podcast</h3>
+                  </div>
+               </a> -->
+
+          <div class="w-full bg-[#3F3F3F] h-[1px] my-2"></div>
+
+          <h1 class="text-white font-bold ps-4">More From YouTube</h1>
+
+          <a href="#premium">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/Dakirby309-Simply-Styled-YouTube.256.ico"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">Premium</h3>
+            </div>
+          </a>
+
+          <a href="#studio">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/studio.webp"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">Studio</h3>
+            </div>
+          </a>
+
+          <a href="#music">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/music.png"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">Music</h3>
+            </div>
+          </a>
+
+          <a href="#kids">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <img
+                src="assets/images/kids.png"
+                class="h-[25px] w-[25px] rounded-full me-6"
+                alt=""
+              />
+              <h3 class="text-sm xmd:text-[17px]">Kids</h3>
+            </div>
+          </a>
+
+          <div class="w-full bg-[#3F3F3F] h-[1px] my-2"></div>
+
+          <a href="#settings">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-gear me-5"></i>
+              <h3 class="text-sm xmd:text-[17px]">Settings</h3>
+            </div>
+          </a>
+
+          <a href="#reportHistory">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-flag me-5"></i>
+              <h3 class="text-sm xmd:text-[17px]">Report History</h3>
+            </div>
+          </a>
+
+          <a href="#help">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-circle-question me-5"></i>
+              <h3 class="text-sm xmd:text-[17px]">help</h3>
+            </div>
+          </a>
+
+          <a href="#feedback">
+            <div
+              class="text-white flex justify-start items-center hover:bg-[#272727] px-4 py-2 rounded-lg xmd:pb-[12px]"
+            >
+              <i class="fa-solid fa-message me-5"></i>
+              <h3 class="text-sm xmd:text-[17px]">Send feedback</h3>
+            </div>
+          </a>
+
+          <div class="w-full bg-[#3F3F3F] h-[1px] my-2"></div>
+
+          <div class="text-[#AAAAAA] text-[14px] px-4 flex flex-col gap-4">
+            <p>About Press Copyright Contact us Creator Advertise Developers</p>
+            <p>
+              Terms Privacy Policy & Safety How YouTube works Test new features
+            </p>
+
+            <p class="text-[12px] pb-4">© 2024 Google LLC</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <!-- PC design -->
+        <div class="hidden md:block">
+          <div class="h-[20vh] bg-[black] flex flex-col w">
+
+            <div class="flex items-center justify-between px-[2vh]">
+              <div class="w-[110px]">
+                <img
+                  src="assets/images/YouTube-White-Full-Color-Logo.wine.png"
+                  alt="YouTube Logo"
+                />
+              </div>
+              <div class="flex gap-3">
+                <div class="rounded-full w-[300px] xlg:h-[45px] xmd:w-[380px] lg:w-[480px] xlg:w-[550px] xl:w-[625px] h-[40px] flex">
+                  <input
+                    type="text"
+                    class="focus:outline-none focus:ring-0 focus:border-[#303030] rounded-s-full px-[4vh] h-[40px] xlg:h-[45px] w-[260px] xmd:w-[330px] lg:w-[480px] xlg:w-[550px] xl:w-[625px] bg-transparent text-white placeholder:text-[#888888] border-2 border-[#303030] border-e-0"
+                    placeholder="Search"
+                  />
+                  <div
+                    class="flex justify-center items-center bg-[#303030] w-[70px] lg:w-[80px] xl:w-[90px] rounded-e-full"
+                  >
+                    <i class="fa-solid fa-magnifying-glass lg:text-[20px] text-[#F1F1F1]"></i>
+                  </div>
+                </div>
+
+                <i
+                  class="fa-solid fa-microphone text-white text-[16px] bg-[#272727] px-[17px] py-[13px] rounded-full"
+                ></i>
+              </div>
+
+              <div class="flex gap-2 lg:gap-4">
+                <a href="#screenCast">
+                  <i
+                    class="fa-solid fa-video text-white text-[16px] bg-[#272727] px-3 py-[13px] rounded-full"
+                  ></i>
+                </a>
+
+                <a href="#bell">
+                  <i
+                    class="fa-solid fa-bell text-white text-[16px] bg-[#272727] px-[14px] py-[13px] rounded-full"
+                  ></i>
+                </a>
+
+                <a href="#you">
+                  <img
+                    src="assets/images/profile.jpg"
+                    class="rounded-full h-[40px] w-[40px]"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="flex gap-3 px-[2vh] overflow-x-auto">
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                All
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Gaming
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Music
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Roasts
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Web Series
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Flute
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                JavaScript
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Future phones
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Comedy clubs
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Data structure
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Algorithm
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Kapil Sharma
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Sketch comedy
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Flute
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                JavaScript
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Future phones
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Comedy clubs
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Data structure
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Algorithm
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Kapil Sharma
+              </h1>
+              <h1
+                class="bg-[#272727] text-white px-3 py-1 rounded-md whitespace-nowrap"
+              >
+                Sketch comedy
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile / tab design -->
+        <div
+          class="md:hidden bg-black h-[10vh] w-full flex items-center justify-between px-[2vh]"
+        >
+          <div class="w-[110px]">
+            <img
+              class="w-full"
+              src="assets/images/YouTube-White-Full-Color-Logo.wine.png"
+              alt=""
+            />
+          </div>
+          <div class="text-[#969696] flex gap-3 sm:gap-7 xsm:gap-10">
+            <a href="#screenCast">
+              <div
+                class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center text-sm hover:text-white"
+              >
+                <i class="fa-solid fa-video pt-2 text-[20px]"></i>
+              </div>
+            </a>
+
+            <a href="#bell">
+              <div
+                class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center text-sm hover:text-white"
+              >
+                <i class="fa-solid fa-bell pt-2 text-[20px]"></i>
+              </div>
+            </a>
+
+            <a href="#search">
+              <div
+                class="relative search w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center text-sm hover:text-white"
+              >
+                <i class="fa-solid fa-magnifying-glass pt-2 text-[20px]"></i>
+              </div>
+            </a>
+
+            <div
+              class="absolute hide top-0 bottom-0 left-0 right-0 h-[100vh] search-menu w-full bg-black py-[3vh] px-[2vh]"
+            >
+              <div class="flex justify-between items-center">
+                <i class="fa-solid fa-arrow-left text-[20px]"></i>
+                <input
+                  type="text"
+                  placeholder="Search YouTube"
+                  class="placeholder:text-[#969696] rounded-full bg-[#343434] border-none px-[vh] h-[40px] w-[65vw] sm:w-[75vw] xsm:w-[80vw] text-white outline-none"
+                />
+                <i
+                  class="fa-solid fa-microphone text-[20px] bg-[#343434] px-3 py-[10px] rounded-full"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="h-[80vh] overflow-y-auto w-full lg:w px-[2vh] bg-black grid grid-cols-1 xsm:grid-cols-2 xlg:grid-cols-3 xxl:grid-cols-4 gap-4">
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class="w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class="w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class=" w-[100%]">
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="text-white flex gap-5 mt-3 pe-3">
+              <img src="assets/images/icon1.jpg" class="rounded-full h-[40px] w-[40px]" alt="">
+              <div class="">
+                <p>Poco F6 vs Realme GT 6T vs Moto Edge 50 Pro vs iQOO Neo 9 Pro</p>
+                <p class="text-[14px] text-[#AAAAAA]">GizBot</p>
+                <p class="text-[14px] text-[#AAAAAA]">42K views - 18 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer in mobile -->
+        <div class="md:hidden bg-black h-[10vh] w-full px-[2vh]">
+          <div class="flex items-center justify-between h-full text-[#949494]">
+            <a href="#home">
+              <div
+                class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center text-sm hover:text-white"
+              >
+                <i class="fa-solid fa-home pt-2 text-[20px]"></i>
+                <h3 class="text-[10px]">Home</h3>
+              </div>
+            </a>
+
+            <a href="#shorts">
+              <div
+                class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center text-sm hover:text-white"
+              >
+                <i class="fa-solid fa-radio pt-2 text-[20px]"></i>
+                <h3 class="text-[10px]">Shorts</h3>
+              </div>
+            </a>
+
+            <a href="#post">
+              <div
+                class="w-[10px] h-[10px] bg-red flex justify-center items-center border-2 border-[#949494] hover:text-white hover:border-white py-5 px-5 rounded-full text-sm"
+              >
+                <i class="fa-solid fa-plus text-xl"></i>
+              </div>
+            </a>
+
+            <a href="#sub">
+              <div
+                class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center text-sm hover:text-white"
+              >
+                <i class="fa-solid fa-film pt-2 text-[20px]"></i>
+                <h3 class="text-[10px]">Subscription</h3>
+              </div>
+            </a>
+
+            <a href="#you">
+              <div
+                class="w-[35px] h-[35px] xmd:w-[55px] xmd:h-[55px] bg-red flex flex-col justify-center items-center text-sm hover:text-white"
+              >
+                <img
+                  src="assets/images/profile.jpg"
+                  class="rounded-full mt-1 h-[25px] w-[25px]"
+                  alt=""
+                />
+                <h3 class="text-[10px]">You</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    $(".search").click(function () {
+      $(".search-menu").fadeIn();
+    });
+
+    $(".fa-arrow-left").click(function () {
+      $(".search-menu").fadeOut();
+    });
+
+    $(".icon-menu-1").css("margin-left", "-250px");
+    $(".icon-menu").click(function () {
+      $(".icon-menu-1").css("margin-left", "0px");
+      $(".icon-menu-1").css("transition", "0.3s");
+    });
+
+    $(".bar").click(function () {
+      $(".icon-menu-1").css("margin-left", "-250px");
+    });
+  });
+</script>
+
+
